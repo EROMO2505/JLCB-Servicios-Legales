@@ -326,9 +326,15 @@ footer p{margin:0;max-width:78ch}
             <tr><td>Domingo</td><td>Cerrado</td></tr>
           </table>
           <div class="copyrow">
-            <span>WhatsApp: <strong id="tel">55 0000 0000</strong></span>
+            <span>WhatsApp: <strong id="tel">442 226 9573</strong></span>
             <button class="copy" type="button" data-copy="tel">Copiar número</button>
           </div>
+          <table aria-label="Otros teléfonos">
+            <tr><td>Celular</td><td><span id="tel2">55 2709 5063</span> <button class="copy" type="button" data-copy="tel2">Copiar</button></td></tr>
+            <tr><td>Celular</td><td><span id="tel3">55 1954 6481</span> <button class="copy" type="button" data-copy="tel3">Copiar</button></td></tr>
+            <tr><td>Celular</td><td><span id="tel4">55 6524 9740</span> <button class="copy" type="button" data-copy="tel4">Copiar</button></td></tr>
+            <tr><td>Oficina (fijo)</td><td><span id="tel5">55 2486 6336</span> <button class="copy" type="button" data-copy="tel5">Copiar</button></td></tr>
+          </table>
           <p class="fine">Las audiencias y plazos urgentes se atienden fuera de este horario.</p>
         </div>
       </div>
@@ -344,8 +350,8 @@ footer p{margin:0;max-width:78ch}
 
 <script>
 // Ajuste aquí el número de WhatsApp (formato internacional, sin signos): México = 52 + 10 dígitos.
-var WHATSAPP = "520000000000";
-var TEL_VISIBLE = "55 0000 0000";
+var WHATSAPP = "524422269573";
+var TEL_VISIBLE = "442 226 9573";
 document.getElementById("tel").textContent = TEL_VISIBLE;
 
 document.querySelectorAll(".copy").forEach(function(btn){
