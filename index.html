@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="JLCB Servicios Legales, despacho jurídico en Tlalpan, Ciudad de México. Derecho penal, amparo, administrativo y fiscal, civil y mercantil.">
+<meta name="color-scheme" content="light dark">
+<title>JLCB Servicios Legales | Despacho jurídico en Tlalpan, CDMX</title>
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: columna editorial a la izquierda con rótulo de expediente, contenido en rejilla de 12 columnas; una banda azul marino al centro marca las etapas del procedimiento. */
+:root{
+  --bg:#F5F6F8;
+  --surface:#FFFFFF;
+  --fg:#14202E;
+  --muted:#556170;
+  --rule:#D3D9E0;
+  --accent:#7A1F2B;
+  --accent-fg:#FFFFFF;
+  --band:#0F1B2A;
+  --band-fg:#E9ECF0;
+  --band-muted:#9AA6B5;
+  --font-display:"Libre Caslon Display","Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --font-body:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --font-ui:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1520; --surface:#142030; --fg:#E8EBEF; --muted:#9FAABA; --rule:#27384B;
+    --accent:#D98A94; --accent-fg:#1A0A0D; --band:#070D15; --band-fg:#E9ECF0; --band-muted:#8794A5;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1520; --surface:#142030; --fg:#E8EBEF; --muted:#9FAABA; --rule:#27384B;
+  --accent:#D98A94; --accent-fg:#1A0A0D; --band:#070D15; --band-fg:#E9ECF0; --band-muted:#8794A5;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:17px;line-height:1.65;padding-inline:20px}
+a{color:inherit}
+.wrap{max-width:1080px;margin-inline:auto}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.label{font-family:var(--font-ui);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;text-wrap:balance;margin:0}
+
+/* Encabezado */
+header.top{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between;padding-block:22px;border-bottom:1px solid var(--rule)}
+.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none}
+.brand b{font-family:var(--font-display);font-weight:400;font-size:28px;letter-spacing:.04em}
+.brand span{font-family:var(--font-ui);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+nav.menu{display:flex;flex-wrap:wrap;gap:6px 24px;font-family:var(--font-ui);font-size:14px}
+nav.menu a{text-decoration:none;color:var(--muted);padding-block:4px;border-bottom:1px solid transparent}
+nav.menu a:hover{color:var(--fg);border-bottom-color:var(--accent)}
+
+/* Portada */
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;padding-block:72px 64px}
+.hero h1{font-size:clamp(38px,6.4vw,76px);line-height:1.06;letter-spacing:-.01em;max-width:15ch}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lede{max-width:56ch;font-size:19px;color:var(--muted);margin:0}
+.hero-foot{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
+.btn{font-family:var(--font-ui);font-size:15px;font-weight:600;display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:2px;text-decoration:none;border:1px solid var(--accent);background:var(--accent);color:var(--accent-fg);cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--fg)}
+.btn.ghost:hover{background:var(--fg);color:var(--bg);filter:none}
+.meta{font-family:var(--font-ui);font-size:13px;color:var(--muted)}
+
+/* Secciones */
+section.block{padding-block:72px;border-top:1px solid var(--rule)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(30px,4.2vw,46px);line-height:1.12;max-width:20ch}
+.sec-head p{margin:0;max-width:60ch;color:var(--muted)}
+
+/* Áreas */
+.areas{border-top:1px solid var(--fg)}
+.area{display:grid;grid-template-columns:minmax(0,1fr);gap:8px 40px;padding-block:26px;border-bottom:1px solid var(--rule)}
+@media (min-width:760px){.area{grid-template-columns:260px minmax(0,1fr)}}
+.area h3{font-size:28px;line-height:1.15}
+.area p{margin:0 0 10px;max-width:62ch}
+.area .terms{font-family:var(--font-ui);font-size:13px;color:var(--muted);margin:0}
+
+/* Banda de etapas */
+.band{background:var(--band);color:var(--band-fg);margin-inline:-20px;padding:72px 20px}
+.band .label{color:var(--band-muted)}
+.band h2{font-size:clamp(30px,4.2vw,46px);line-height:1.12;max-width:22ch;margin-block:14px 12px}
+.band p.intro{max-width:62ch;color:var(--band-muted);margin:0 0 44px}
+.stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border-top:1px solid #3A4A5E}
+.stage{padding:22px 24px 8px 0;border-right:1px solid #2A3A4E;padding-left:20px}
+.stage:first-child{padding-left:0}
+.stage:last-child{border-right:0}
+.stage h3{font-size:24px;margin-bottom:6px}
+.stage .art{font-family:var(--font-ui);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--band-muted);display:block;margin-bottom:10px}
+.stage p{margin:0;font-size:15px;color:var(--band-muted)}
+.stage ul{margin:10px 0 0;padding:0;list-style:none;font-family:var(--font-ui);font-size:13px;color:var(--band-fg);display:grid;gap:4px}
+.stage ul li::before{content:"— ";color:var(--band-muted)}
+.note{font-family:var(--font-ui);font-size:12px;color:var(--band-muted);margin:28px 0 0}
+
+/* Equipo */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
+.person{background:var(--surface);border:1px solid var(--rule);padding:28px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.person .mono{width:56px;height:56px;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-family:var(--font-display);font-size:22px;letter-spacing:.06em}
+.person h3{font-size:26px;line-height:1.15}
+.person .role{font-family:var(--font-ui);font-size:13px;color:var(--muted);letter-spacing:.04em}
+.person p{margin:0;font-size:15.5px}
+.person ul{margin:0;padding-left:18px;font-size:15px;color:var(--muted)}
+
+/* Contacto */
+.contact{display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:860px){.contact{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}}
+.col{min-width:0;display:flex;flex-direction:column;gap:24px}
+form{display:grid;gap:16px;background:var(--surface);border:1px solid var(--rule);padding:28px}
+.field{display:grid;gap:6px;min-width:0}
+.field label{font-family:var(--font-ui);font-size:13px;font-weight:500}
+input,select,textarea{font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--rule);border-radius:2px;padding:11px 12px;width:100%;min-width:0}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--accent)}
+.fine{font-family:var(--font-ui);font-size:12.5px;color:var(--muted);margin:0}
+#resultado{border:1px solid var(--accent);padding:18px;display:grid;gap:12px;font-family:var(--font-ui);font-size:14px}
+#resultado p{margin:0}
+.addr{font-style:normal;font-size:18px;line-height:1.5}
+.card{background:var(--surface);border:1px solid var(--rule);padding:24px;display:grid;gap:14px}
+table{border-collapse:collapse;width:100%;font-family:var(--font-ui);font-size:14px}
+td{padding:9px 0;border-bottom:1px solid var(--rule)}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.copyrow{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;font-family:var(--font-ui);font-size:14px}
+.copy{font-family:var(--font-ui);font-size:12.5px;background:transparent;color:var(--fg);border:1px solid var(--rule);padding:5px 10px;border-radius:2px;cursor:pointer}
+.copy:hover{border-color:var(--accent)}
+.locator{border:1px solid var(--rule);background:var(--surface);padding:22px;display:grid;gap:10px}
+.locator svg{width:100%;height:auto;display:block;max-width:100%}
+
+footer{border-top:1px solid var(--fg);padding-block:36px 56px;display:grid;gap:14px;font-family:var(--font-ui);font-size:13px;color:var(--muted)}
+footer p{margin:0;max-width:78ch}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#inicio"><b>JLCB</b><span>Servicios Legales</span></a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#areas">Áreas</a>
+      <a href="#proceso">Procedimiento penal</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <div class="hero">
+      <span class="label">Despacho jurídico · Tlalpan, Ciudad de México</span>
+      <h1>Defensa técnica, <em>con estrategia</em> desde la primera citación.</h1>
+      <p class="lede">Atendemos asuntos penales, de amparo, administrativos, fiscales, civiles y mercantiles. Cada caso se revisa con las constancias a la vista y se plantea con fundamento en la ley aplicable.</p>
+      <div class="hero-foot">
+        <a class="btn" href="#contacto">Agendar una consulta</a>
+        <a class="btn ghost" href="#areas">Ver áreas de práctica</a>
+        <span class="meta">Calle Diligencias No. 71, San Pedro Mártir</span>
+      </div>
+    </div>
+
+    <section class="block" id="areas">
+      <div class="sec-head">
+        <span class="label">Áreas de práctica</span>
+        <h2>Materias en las que litigamos</h2>
+        <p>Un mismo hecho puede abrir una carpeta de investigación, un juicio civil y un procedimiento administrativo. Los coordinamos para que la defensa sea consistente en cada frente.</p>
+      </div>
+      <div class="areas">
+        <article class="area">
+          <h3>Derecho penal</h3>
+          <div>
+            <p>Defensa de imputados y asesoría a víctimas en el sistema penal acusatorio, desde la entrevista en la fiscalía hasta la impugnación de resoluciones.</p>
+            <p class="terms">Carpetas de investigación · audiencia inicial · medidas cautelares · suspensión condicional · acuerdos reparatorios · impugnación</p>
+          </div>
+        </article>
+        <article class="area">
+          <h3>Amparo</h3>
+          <div>
+            <p>Demandas de amparo indirecto y directo contra actos de autoridad, omisiones del Ministerio Público, resoluciones judiciales y laudos.</p>
+            <p class="terms">Amparo indirecto · amparo directo · suspensión · queja · revisión · cumplimiento de sentencias</p>
+          </div>
+        </article>
+        <article class="area">
+          <h3>Administrativo y fiscal</h3>
+          <div>
+            <p>Representación ante autoridades administrativas y fiscales, y defensa frente a créditos, multas, resoluciones y actos de fiscalización.</p>
+            <p class="terms">Recursos administrativos · juicio contencioso administrativo · procedimiento fiscal · medios de defensa</p>
+          </div>
+        </article>
+        <article class="area">
+          <h3>Civil</h3>
+          <div>
+            <p>Contratos, arrendamiento, cobro de rentas, desocupación de inmuebles, sucesiones y controversias patrimoniales.</p>
+            <p class="terms">Arrendamiento · desahucio · sucesiones · cumplimiento de contratos · medidas provisionales</p>
+          </div>
+        </article>
+        <article class="area">
+          <h3>Mercantil</h3>
+          <div>
+            <p>Redacción y revisión de contratos comerciales, cobranza, títulos de crédito y litigio entre comerciantes.</p>
+            <p class="terms">Contratos mercantiles · juicio ejecutivo mercantil · pagarés · cláusulas de garantía y fianza</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="band" id="proceso">
+    <div class="wrap">
+      <span class="label">Procedimiento penal acusatorio</span>
+      <h2>Saber en qué etapa está su asunto cambia la estrategia</h2>
+      <p class="intro">El Código Nacional de Procedimientos Penales divide el procedimiento en tres etapas. La defensa actúa distinto en cada una, y las primeras decisiones suelen pesar más adelante.</p>
+      <div class="stages">
+        <div class="stage">
+          <span class="art">Art. 211, fr. I</span>
+          <h3>Investigación</h3>
+          <p>Inicial, ante el Ministerio Público; complementaria, ya formulada la imputación y bajo control judicial.</p>
+          <ul><li>Entrevista y citatorios</li><li>Audiencia inicial</li><li>Plazo de investigación complementaria</li></ul>
+        </div>
+        <div class="stage">
+          <span class="art">Art. 211, fr. II</span>
+          <h3>Intermedia</h3>
+          <p>Preparación del juicio: se ofrecen pruebas y se depura lo que llegará al tribunal.</p>
+          <ul><li>Acusación y su descubrimiento</li><li>Exclusión de pruebas</li><li>Auto de apertura a juicio</li></ul>
+        </div>
+        <div class="stage">
+          <span class="art">Art. 211, fr. III</span>
+          <h3>Juicio</h3>
+          <p>Audiencia ante el tribunal de enjuiciamiento, con desahogo de pruebas y sentencia.</p>
+          <ul><li>Alegatos</li><li>Deliberación y fallo</li><li>Impugnación</li></ul>
+        </div>
+      </div>
+      <p class="note">Información general con fines de orientación. Cada asunto se analiza con sus constancias.</p>
+    </div>
+  </div>
+
+  <section class="block" id="equipo">
+    <div class="sec-head">
+      <span class="label">Equipo</span>
+      <h2>Quién lleva su asunto</h2>
+      <p>Trabajo directo con el equipo, sin intermediarios.</p>
+    </div>
+    <div class="team">
+      <article class="person">
+        <div class="mono" aria-hidden="true">JC</div>
+        <h3>José Luis Castañeda Benítez</h3>
+        <span class="role">Dirección del despacho</span>
+        <p>Atiende asuntos penales y administrativos. <!-- Completar: cédula profesional, años de ejercicio, formación y trayectoria --> Cédula profesional y trayectoria por confirmar.</p>
+      </article>
+      <article class="person">
+        <div class="mono" aria-hidden="true">ER</div>
+        <h3>Emiliano Romo Campos</h3>
+        <span class="role">Pasante de Derecho · materia penal y administrativa</span>
+        <p>Concluyó la Licenciatura en Derecho en la Universidad Intercontinental. Colabora en el despacho desde marzo de 2025 en materia penal y administrativa.</p>
+        <ul>
+          <li>Diplomado en Derecho Procesal Fiscal, Fundación Escuela Nacional de Jurisprudencia (UNAM), 2025</li>
+          <li>Servicio social como adjunto en derecho penal, Universidad Intercontinental</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="contacto">
+    <div class="sec-head">
+      <span class="label">Contacto</span>
+      <h2>Cuéntenos su caso</h2>
+      <p>Lo que nos escriba es confidencial. Entre más claros sean los datos y las fechas, más útil será la primera orientación.</p>
+    </div>
+    <div class="contact">
+      <div class="col">
+        <form id="consulta" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="materia">Materia</label>
+            <select id="materia" name="materia">
+              <option>Derecho penal</option>
+              <option>Amparo</option>
+              <option>Administrativo y fiscal</option>
+              <option>Civil</option>
+              <option>Mercantil</option>
+              <option>No estoy seguro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="asunto">Resumen del asunto</label>
+            <textarea id="asunto" name="asunto" placeholder="Qué ocurrió, ante qué autoridad está el asunto y si hay fechas próximas (citatorio, audiencia, plazo)." required></textarea>
+          </div>
+          <button class="btn" type="submit">Preparar mensaje de WhatsApp</button>
+          <p class="fine">Este formulario no envía nada por sí mismo. Prepara el texto para que usted lo mande por WhatsApp.</p>
+          <div id="resultado" hidden aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <span class="label">Despacho</span>
+          <address class="addr">Calle Diligencias No. 71<br>Colonia San Pedro Mártir<br>Alcaldía Tlalpan, C.P. 14650<br>Ciudad de México</address>
+          <div class="locator" aria-label="Ubicación aproximada en Tlalpan">
+            <svg viewBox="0 0 320 120" role="img" aria-label="Esquema: San Pedro Mártir, Tlalpan, al sur de la Ciudad de México">
+              <rect x="0" y="0" width="320" height="120" fill="none"/>
+              <path d="M0 78 L320 58" stroke="var(--rule)" stroke-width="10" fill="none"/>
+              <path d="M110 0 L150 120" stroke="var(--rule)" stroke-width="6" fill="none"/>
+              <path d="M210 0 L190 120" stroke="var(--rule)" stroke-width="4" fill="none"/>
+              <circle cx="132" cy="70" r="7" fill="var(--accent)"/>
+              <circle cx="132" cy="70" r="14" fill="none" stroke="var(--accent)" stroke-width="1"/>
+              <text x="150" y="40" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="var(--muted)">San Pedro Mártir</text>
+              <text x="150" y="104" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="var(--muted)">Tlalpan</text>
+            </svg>
+            <p class="fine">Esquema ilustrativo, no a escala.</p>
+          </div>
+          <a class="btn ghost" id="mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Calle+Diligencias+71+San+Pedro+M%C3%A1rtir+Tlalpan+14650+Ciudad+de+M%C3%A9xico">Abrir en Google Maps</a>
+        </div>
+
+        <div class="card">
+          <span class="label">Horarios</span>
+          <table>
+            <tr><td>Lunes a viernes</td><td>9:00 – 18:00</td></tr>
+            <tr><td>Sábado</td><td>Con cita previa</td></tr>
+            <tr><td>Domingo</td><td>Cerrado</td></tr>
+          </table>
+          <div class="copyrow">
+            <span>WhatsApp: <strong id="tel">55 0000 0000</strong></span>
+            <button class="copy" type="button" data-copy="tel">Copiar número</button>
+          </div>
+          <p class="fine">Las audiencias y plazos urgentes se atienden fuera de este horario.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <strong style="color:var(--fg);font-weight:600">JLCB Servicios Legales</strong>
+    <p>Calle Diligencias No. 71, Colonia San Pedro Mártir, Alcaldía Tlalpan, C.P. 14650, Ciudad de México.</p>
+    <p>La información de este sitio es de carácter general y no constituye asesoría legal ni garantiza resultados. La relación con el despacho inicia con la contratación de sus servicios.</p>
+  </footer>
+</div>
+
+<script>
+// Ajuste aquí el número de WhatsApp (formato internacional, sin signos): México = 52 + 10 dígitos.
+var WHATSAPP = "520000000000";
+var TEL_VISIBLE = "55 0000 0000";
+document.getElementById("tel").textContent = TEL_VISIBLE;
+
+document.querySelectorAll(".copy").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    var el = document.getElementById(btn.getAttribute("data-copy"));
+    var txt = el.textContent;
+    function sel(){
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    }
+    var prev = btn.textContent;
+    try{
+      navigator.clipboard.writeText(txt).then(function(){ btn.textContent = "Copiado"; setTimeout(function(){btn.textContent = prev}, 1600); }, sel);
+    }catch(e){ sel(); }
+  });
+});
+
+document.getElementById("consulta").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  var nombre = document.getElementById("nombre").value.trim();
+  var materia = document.getElementById("materia").value;
+  var asunto = document.getElementById("asunto").value.trim();
+  var out = document.getElementById("resultado");
+  out.textContent = "";
+  out.hidden = false;
+  if(!nombre || !asunto){
+    var p = document.createElement("p");
+    p.textContent = "Escriba su nombre y un resumen del asunto para preparar el mensaje.";
+    out.appendChild(p);
+    return;
+  }
+  var texto = "Hola, soy " + nombre + ". Quiero una consulta en materia de " + materia.toLowerCase() + ".\n\n" + asunto;
+  var p1 = document.createElement("p");
+  p1.textContent = "Mensaje listo. Revíselo y envíelo por WhatsApp:";
+  var pre = document.createElement("p");
+  pre.style.whiteSpace = "pre-wrap";
+  pre.style.borderLeft = "2px solid var(--rule)";
+  pre.style.paddingLeft = "12px";
+  pre.textContent = texto;
+  var a = document.createElement("a");
+  a.className = "btn";
+  a.target = "_blank"; a.rel = "noopener";
+  a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(texto);
+  a.textContent = "Abrir WhatsApp con este mensaje";
+  a.style.justifySelf = "start";
+  out.appendChild(p1); out.appendChild(pre); out.appendChild(a);
+});
+</script>
+
+</body>
+</html>
