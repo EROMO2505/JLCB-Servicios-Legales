@@ -21,6 +21,7 @@
   --rule:#D3D9E0;
   --accent:#7A1F2B;
   --accent-fg:#FFFFFF;
+  --logo-bg:transparent;
   --band:#0F1B2A;
   --band-fg:#E9ECF0;
   --band-muted:#9AA6B5;
@@ -31,13 +32,13 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#0D1520; --surface:#142030; --fg:#E8EBEF; --muted:#9FAABA; --rule:#27384B;
-    --accent:#D98A94; --accent-fg:#1A0A0D; --band:#070D15; --band-fg:#E9ECF0; --band-muted:#8794A5;
+    --accent:#D98A94; --accent-fg:#1A0A0D; --logo-bg:#F3F4F6; --band:#070D15; --band-fg:#E9ECF0; --band-muted:#8794A5;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0D1520; --surface:#142030; --fg:#E8EBEF; --muted:#9FAABA; --rule:#27384B;
-  --accent:#D98A94; --accent-fg:#1A0A0D; --band:#070D15; --band-fg:#E9ECF0; --band-muted:#8794A5;
+  --accent:#D98A94; --accent-fg:#1A0A0D; --logo-bg:#F3F4F6; --band:#070D15; --band-fg:#E9ECF0; --band-muted:#8794A5;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -51,15 +52,21 @@ h1,h2,h3{font-family:var(--font-display);font-weight:400;text-wrap:balance;margi
 
 /* Encabezado */
 header.top{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between;padding-block:22px;border-bottom:1px solid var(--rule)}
-.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none}
-.brand b{font-family:var(--font-display);font-weight:400;font-size:28px;letter-spacing:.04em}
-.brand span{font-family:var(--font-ui);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.brand{display:block;line-height:0;background:var(--logo-bg);border-radius:2px}
+.brand img{display:block;height:84px;width:auto;max-width:100%;mix-blend-mode:multiply}
 nav.menu{display:flex;flex-wrap:wrap;gap:6px 24px;font-family:var(--font-ui);font-size:14px}
 nav.menu a{text-decoration:none;color:var(--muted);padding-block:4px;border-bottom:1px solid transparent}
 nav.menu a:hover{color:var(--fg);border-bottom-color:var(--accent)}
 
 /* Portada */
 .hero{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;padding-block:72px 64px}
+.hero-logo{display:none;background:var(--logo-bg);border-radius:2px;line-height:0}
+.hero-logo img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+@media (min-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr) 340px;column-gap:56px}
+  .hero > *{grid-column:1}
+  .hero > .hero-logo{display:block;grid-column:2;grid-row:1 / span 4;align-self:center}
+}
 .hero h1{font-size:clamp(34px,5.6vw,64px);line-height:1.06;letter-spacing:-.01em;max-width:15ch}
 .hero h1 em{font-style:italic;color:var(--accent)}
 .hero .lede{max-width:56ch;font-size:19px;color:var(--muted);margin:0}
@@ -142,7 +149,7 @@ footer p{margin:0;max-width:78ch}
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="#inicio"><b>JLCB</b><span>Servicios Legales</span></a>
+    <a class="brand" href="#inicio"><img src="logo.png" width="720" height="739" alt="JLCB y Asociados, Servicios Legales"></a>
     <nav class="menu" aria-label="Principal">
       <a href="#areas">Áreas</a>
       <a href="#proceso">Procedimiento penal</a>
@@ -153,6 +160,7 @@ footer p{margin:0;max-width:78ch}
 
   <main id="inicio">
     <div class="hero">
+      <div class="hero-logo"><img src="logo.png" width="720" height="739" alt=""></div>
       <span class="label">Despacho jurídico · Tlalpan, Ciudad de México</span>
       <h1>Defensa técnica, <em>con estrategia</em> desde la primera citación.</h1>
       <p class="lede">Atendemos asuntos penales, de amparo, administrativos, fiscales, civiles y mercantiles. Cada caso se revisa con las constancias a la vista y se plantea con fundamento en la ley aplicable.</p>
