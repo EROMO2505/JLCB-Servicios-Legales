@@ -122,7 +122,11 @@ section.block{padding-block:72px;border-top:1px solid var(--rule)}
 .note{font-family:var(--font-ui);font-size:12px;color:var(--band-muted);margin:28px 0 0}
 
 /* Equipo */
-.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
+.team{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:640px){.team{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.team{grid-template-columns:repeat(3,1fr)}}
+.grupo{font-family:var(--font-ui);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin:40px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+.grupo:first-of-type{margin-top:8px}
 .person{background:var(--surface);border:1px solid var(--rule);padding:28px;display:flex;flex-direction:column;gap:10px;min-width:0}
 .person .mono{width:56px;height:56px;border:1px solid var(--gold);color:var(--gold-text);display:grid;place-items:center;font-family:var(--font-display);font-size:22px;letter-spacing:.06em}
 .person .foto{width:120px;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border:1px solid var(--gold);padding:3px;background:var(--surface)}
@@ -274,6 +278,7 @@ footer p{margin:0;max-width:78ch}
       <h2>Quién lleva su asunto</h2>
       <p>Trabajo directo con el equipo, sin intermediarios.</p>
     </div>
+    <h3 class="grupo">Abogados</h3>
     <div class="team">
       <article class="person">
         <img class="foto" src="foto-jose-luis.jpg" width="480" height="600" alt="José Luis Castañeda Benítez" loading="lazy">
@@ -290,6 +295,9 @@ footer p{margin:0;max-width:78ch}
         <span class="role">Abogado · materia penal</span>
         <p>Abogado egresado de la Universidad Nacional Autónoma de México en 2019. Realizó su servicio social en la Fiscalía General de Justicia de la Ciudad de México y ejerce como abogado postulante en materia penal. Colabora en el despacho desde 2020.</p>
       </article>
+    </div>
+    <h3 class="grupo">Pasantes de Derecho</h3>
+    <div class="team">
       <article class="person">
         <img class="foto" src="foto-emiliano.jpg" width="480" height="600" alt="Emiliano Romo Campos" loading="lazy">
         <h3>Emiliano Romo Campos</h3>
