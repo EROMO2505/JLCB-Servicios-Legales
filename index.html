@@ -125,6 +125,7 @@ section.block{padding-block:72px;border-top:1px solid var(--rule)}
 .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
 .person{background:var(--surface);border:1px solid var(--rule);padding:28px;display:flex;flex-direction:column;gap:10px;min-width:0}
 .person .mono{width:56px;height:56px;border:1px solid var(--gold);color:var(--gold-text);display:grid;place-items:center;font-family:var(--font-display);font-size:22px;letter-spacing:.06em}
+.person .foto{width:120px;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border:1px solid var(--gold);padding:3px;background:var(--surface)}
 .person h3{font-size:26px;line-height:1.15}
 .person .role{font-family:var(--font-ui);font-size:13px;color:var(--muted);letter-spacing:.04em}
 .person p{margin:0;font-size:15.5px}
@@ -275,7 +276,7 @@ footer p{margin:0;max-width:78ch}
     </div>
     <div class="team">
       <article class="person">
-        <div class="mono" aria-hidden="true">JC</div>
+        <img class="foto" src="foto-jose-luis.jpg" width="480" height="600" alt="José Luis Castañeda Benítez" loading="lazy">
         <h3>José Luis Castañeda Benítez</h3>
         <span class="role">Socio fundador</span>
         <p>Licenciado en Derecho por la Universidad Intercontinental y maestro en Derecho Procesal Penal por la Universidad Panamericana. Fue agente del Ministerio Público de la Federación en la PGR, director general de investigación de delitos patrimoniales no violentos relacionados con instituciones del sistema financiero en la PGJDF, y asesor del presidente del Tribunal Superior de Justicia del Distrito Federal.</p>
