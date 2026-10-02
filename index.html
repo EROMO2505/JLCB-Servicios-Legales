@@ -10,7 +10,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
 /* Layout: columna editorial a la izquierda con rótulo de expediente, contenido en rejilla de 12 columnas; una banda azul marino al centro marca las etapas del procedimiento. */
 :root{
@@ -24,8 +24,8 @@
   --band:#0F1B2A;
   --band-fg:#E9ECF0;
   --band-muted:#9AA6B5;
-  --font-display:"Libre Caslon Display","Libre Caslon Text",Georgia,"Times New Roman",serif;
-  --font-body:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --font-display:"Bookman Old Style","Bookman","ITC Bookman","URW Bookman","URW Bookman L",Georgia,"Times New Roman",serif;
+  --font-body:"Bookman Old Style","Bookman","ITC Bookman","URW Bookman","URW Bookman L",Georgia,"Times New Roman",serif;
   --font-ui:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme: dark){
@@ -60,7 +60,7 @@ nav.menu a:hover{color:var(--fg);border-bottom-color:var(--accent)}
 
 /* Portada */
 .hero{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;padding-block:72px 64px}
-.hero h1{font-size:clamp(38px,6.4vw,76px);line-height:1.06;letter-spacing:-.01em;max-width:15ch}
+.hero h1{font-size:clamp(34px,5.6vw,64px);line-height:1.06;letter-spacing:-.01em;max-width:15ch}
 .hero h1 em{font-style:italic;color:var(--accent)}
 .hero .lede{max-width:56ch;font-size:19px;color:var(--muted);margin:0}
 .hero-foot{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
